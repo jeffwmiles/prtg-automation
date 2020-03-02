@@ -1,0 +1,20 @@
+{
+  "prtg": {
+    "description" : {
+      "device": "azuresiterecovery",
+      "query": "/api/Get-ASR-Health?code={key}",
+      "comment": "Documentation is on Managed Services Doc Library"
+    },
+    "result": [
+      {
+
+		"value": {
+            #1: $..({ @.FriendlyName : @.ReplicationHealth }).*
+        },
+        "valueLookup": "prtg.customlookups.healthyunhealthy.stateonok",
+        "LimitMode":0,
+        "unit": "Custom",
+      }
+    ]
+  }
+}

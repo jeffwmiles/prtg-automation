@@ -1,0 +1,20 @@
+{
+  "prtg": {
+    "description" : {
+      "device": "azureapplicationgateway",
+      "query": "/api/Get-AppGw-Health?code={key}",
+      "comment": "Documentation is on Managed Services Doc Library"
+    },
+    "result": [
+      {
+
+		"value": {
+            #1: $..({ @.Address : @.Health }).*
+        },
+        "valueLookup": "prtg.customlookups.healthyunhealthy.stateonok",
+        "LimitMode":0,
+        "unit": "Custom",
+      }
+    ]
+  }
+}

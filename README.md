@@ -1,2 +1,2 @@
 # prtg-automation
-Loosely related collection of PRTG
+Loosely related collection of PRTG automation scripts and snippets.
